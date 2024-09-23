@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+.container {
+    border: 4px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    height: 500px;
+    width: 500px;
+}
+
+
+.grid{
+    background-color: #212121;
+
+}
+
+button {
+    padding: 10px 40px;
+    margin: 2% auto;
+
+}

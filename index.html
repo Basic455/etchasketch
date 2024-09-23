@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-sketch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="start">start</button>
+    <div class="container"></div>
+
+
+    <script>
+
+        const button = document.querySelector(".start")
+        const container = document.querySelector(".container")
+
+
+
+        button.addEventListener('click', function(){
+            const num = prompt("no of rows/columns: ")
+            makeGrid(num)
+            if(!isNaN(num) && num <= 100 ){
+            function makeGrid(num){
+            for (let i = 0; i < num; i++) {
+                const row = container.appendChild(document.createElement('div'))
+                for(let j = 0; j<num; j++) {
+                    const square = document.createElement('div');
+                    square.className = 'grid';
+                    square.style.width = `${500/num}px`
+                    square.style.height = `${500/num}px`
+                    square.addEventListener('mouseover', function(){
+                        square.style.backgroundColor = "red";
+                    })
+                    row.appendChild(square);
+                }
+                
+                
+            }
+        }
+
+
+        } else {
+            alert('max value exceeded')
+        }
+        
+
+        })
+
+  
+    </script>
+</body>
+</html>
